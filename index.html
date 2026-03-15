@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security: Content Security Policy -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';
+      "
+    />
+
+    <!-- Security: Additional headers via meta -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+    <!-- SEO & Social -->
+    <title>OSI Attack Map</title>
+    <meta name="description" content="Interactive Attack Map on every OSI Model layer." />
+    <meta name="keywords" content="OSI model, cybersecurity, attack map, network security, defenses, MITRE ATT&CK" />
+    <meta name="author" content="João Mesquita" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="OSI Attack Map" />
+    <meta property="og:description" content="Interactive Attack Map on every OSI Model layer." />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/osi-attack-map/favicon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
