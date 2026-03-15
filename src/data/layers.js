@@ -548,7 +548,7 @@ export const layers = [
         risk: 'critical',
         description: 'Impersonates trusted entities via email, SMS, or voice to steal credentials or deliver malware. Spear phishing uses personal research for high conversion rates. AiTM (Adversary-in-the-Middle) phishing proxies real sites in real time — capturing session tokens and bypassing MFA. Main initial access vector in most major breaches.',
         defenses: [
-          'AiTM MFA (FIDO2/WebAuthn) - YubiKeys',
+          'Anti-AiTM MFA (FIDO2/WebAuthn) - YubiKeys',
           'Anti-phishing email filters (DMARC, SPF, DKIM)',
           'Security awareness training',
           'DNS filtering — block known phishing domains'
