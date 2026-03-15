@@ -344,7 +344,7 @@ export const layers = [
       {
         id: 'tcp-rst-injection',
         name: 'TCP Reset (RST) Injection',
-        impact: 'medium',
+        risk: 'medium',
         description: 'TCP accepts RST packets based on source IP and sequence number alone — no cryptographic verification. Attacker spoofs a RST packet with the correct sequence number, causing both endpoints to immediately terminate the connection. Used by China\'s Great Firewall.',
         defenses: [
           'TLS — RST are authenticated in QUIC and TLS 1.3',
@@ -393,7 +393,7 @@ export const layers = [
           'Short token expiry — minimise replay window',
           'Nonces — unique single-use values',
           'HTTPS',
-          'Cryptographically Token binding to TLS session'
+          'Cryptographic token binding to TLS session'
         ]
       },
       {
@@ -514,7 +514,7 @@ export const layers = [
       {
         id: 'insecure-deserialization',
         name: 'Insecure Deserialization',
-        impact: 'critical',
+        risk: 'critical',
         description: 'Many deserialization implementations execute code while reconstructing objects from byte streams. Attacker sends a crafted serialized object that abuses existing classes on the server to achieve arbitrary code execution. No code upload needed.',
         defenses: [
           'Never deserialize untrusted data — primary defense',
